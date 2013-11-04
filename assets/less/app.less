@@ -1,0 +1,99 @@
+@import "bootstrap/bootstrap.less";
+@import url(http://fonts.googleapis.com/css?family=Headland+One|Radley|Quattrocento|Quando);
+
+/* Variables */
+
+@brand-primary:  #D74F26;
+@brand-secondary: #00628D;
+
+/* Mixins */
+
+.round{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* HTML */
+
+p{
+  color: #3C3C3C;
+  font-size: 18px;
+  font-family: @font-family-serif;
+  line-height: 2;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+/* Header */
+.header-image{
+  color: #fff;
+  height: 220px;
+  background-size: 100%;
+  background-position: center center;
+  text-align: right;
+  a{
+    color: @brand-primary;
+    font-weight: 200;
+  }
+  h2{
+    width: 300px;
+    .pull-right;
+    .hidden-xs;
+  }
+}
+.blog-logo{
+  width: 120px;
+  height: auto;
+  .round;
+  .center;
+  margin-top: 20px;
+  border: 5px solid #fff;
+}
+.navbar-search{
+  width: 200px;
+  float: right;
+  margin-top: 8px;
+}
+
+/* Content */
+
+article{
+  margin-top: 40px;
+}
+
+
+/* Footer */
+
+.copyright{
+  font-size: 12px;
+}
+.poweredby{
+  font-size: 12px;
+}
+
+/* Footer */
+footer{
+  .footer-nav li{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+@media (min-width: @screen-sm) {
+  .header-image{
+    height: 400px;
+  }
+}
+
+@media (min-width: @screen-md) { }
+
+@media (min-width: @screen-lg) { }

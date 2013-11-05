@@ -12,14 +12,12 @@
   {{! Each post will be output using this markup }}
   {{#foreach posts}}
     <section class="col-md-8 col-md-offset-2 excerpt-wrap {{post_class}}">
-      <header class="post-header">
+      <div class="post-excerpt">
         <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
         <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
-      </header>    
-      <article class="post-excerpt">
         <p>{{excerpt}}&hellip;</p>
         <h4><a class="{{url}}" href="{{url}}">Read</a></h4>
-      </article>
+      </div>
     </section>
   {{/foreach}}
   </div>

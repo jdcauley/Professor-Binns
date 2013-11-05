@@ -32,12 +32,17 @@ img{
   height: auto;
 }
 /* Header */
+header{
+  .inner{
+    margin-top: 20px;
+  }
+}
 .header-image{
   color: #fff;
   height: 220px;
   background-size: 100%;
   background-position: center center;
-  text-align: right;
+  text-align: center;
   a{
     color: @brand-primary;
     font-weight: 200;
@@ -64,10 +69,15 @@ img{
 
 /* Content */
 
-article{
+.excerpt-wrap{
   margin-top: 40px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid @brand-primary;
+  &:last-child{
+    border-bottom: none;
+  }
 }
-
 
 /* Footer */
 
@@ -89,8 +99,17 @@ footer{
 
 
 @media (min-width: @screen-sm) {
+  header{
+    .inner{
+      margin-top: 90px;
+    }
+  }
   .header-image{
     height: 400px;
+    text-align: right;
+  }
+  .blog-logo{
+    .pull-left;
   }
 }
 

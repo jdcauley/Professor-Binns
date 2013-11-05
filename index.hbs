@@ -8,20 +8,21 @@
 
 {{! The main content area on the homepage }}
 <main class="container content" role="main">
+  <div class="row">
   {{! Each post will be output using this markup }}
   {{#foreach posts}}
-
-  <article class="row {{post_class}}">
-    <header class="col-md-8 col-md-offset-2 post-header">
-      <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-      <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
-    </header>    
-    <section class="col-md-8 col-md-offset-2 post-excerpt">
-      <p>{{excerpt}}&hellip;</p>
-      <h4><a class="{{url}}" href="{{url}}">Read</a></h4>
+    <section class="col-md-8 col-md-offset-2 excerpt-wrap {{post_class}}">
+      <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}</span>
+      </header>    
+      <article class="post-excerpt">
+        <p>{{excerpt}}&hellip;</p>
+        <h4><a class="{{url}}" href="{{url}}">Read</a></h4>
+      </article>
     </section>
-  </article>
   {{/foreach}}
+  </div>
   <section class="row">
     <div class="col-md-8 col-md-offset-2">
       {{!! After all the posts, we have the previous/next pagination links }}
